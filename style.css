@@ -17,6 +17,56 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.invisible {
+    opacity: 0;
+}
+
+/* loader */
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover {
+    overflow: hidden;
+    position: absolute;
+}
+
+.disableCover {
+    overflow: visible;
+}
+
+.loaderName {
+    font-size: 30px;
+    transform: translateY(170%) rotate(15deg);
+    position: relative;
+    line-height: 1;
+}
+
+.loaderName span {
+    display: inline-block;
+}
+
+.nameBr {
+    display: none;
+}
+
+.right {
+    text-align: right;
+    float: right;
+    margin-left: 5px;
+}
+
+.nameBig {
+    display: flex;
+    flex-direction: column;
+}
+
 /* header */
 
 .header {
