@@ -21,6 +21,10 @@
     opacity: 0;
 }
 
+.arrow {
+    opacity: 0;
+}
+
 /* loader */
 
 .loader {
@@ -44,14 +48,14 @@
 
 .loaderName {
     font-size: 30px;
-    transform: translateY(170%) rotate(15deg);
+    transform: translateY(210%) rotate(15deg);
     position: relative;
     line-height: 1;
+    will-change: transform
 }
 
 .loaderName span {
     display: inline-block;
-    will-change: transform;
 }
 
 .nameBr {
@@ -218,5 +222,42 @@ img {
 
     .name {
         font-size: 75px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .header {
+        margin-top: 50px;
+    }
+
+    .container {
+        padding: 0 100px;
+    }
+    .name {
+        font-size: 100px;
+    }
+
+    .img1 {
+        right: 165px;
+        width: 30vw;
+        margin-top: 50px;
+    }
+
+    .img2 {
+        width: 35vw;
+        left: 55%;
+        margin-top: 300px;
+    }
+
+    .introTxt {
+        margin-top: 75px;
+    }
+
+    .arrow {
+        opacity: 1;
+        position: absolute;
+        right: 95px;
+        bottom: 150px;
     }
 }

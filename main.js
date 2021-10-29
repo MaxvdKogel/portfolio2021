@@ -6,6 +6,7 @@ let tl = gsap.timeline();
 let fontSize = 60;
 let imgMove = document.querySelector(".img1").clientHeight
 let containerPadding = 10;
+let extraSpacing = 0;
 
 if(window.screen.width <= 320) {
     fontSize = 50;
@@ -20,8 +21,14 @@ if(window.screen.width > 900) {
     fontSize = 75;
 }
 
+if(window.screen.width > 1200) {
+    containerPadding = 100;
+    fontSize = 100;
+    extraSpacing = 7;
+}
+
 window.onload = () => {
-    tl.to(".loaderName", { transform: "translate(0)", duration: .75, ease: "power2.out", onComplete: () => {
+    tl.to(".loaderName", { transform: "translate(0)", duration: 1, ease: "power2.out", onComplete: () => {
         document.querySelector(".cover").classList.add("disableCover");
     } })
       .to(".loaderName", {
@@ -33,6 +40,7 @@ window.onload = () => {
       })
       .to(".cover", {
           top: document.querySelector(".header").offsetHeight + 15,
+          x: extraSpacing,
           duration: .75,
           ease: "Power2.inOut",
           onComplete: () => {
@@ -46,7 +54,7 @@ window.onload = () => {
             duration: .5,
             ease: "power2.out"
       }, "-=.4")
-      .from(".circle, .navLink", {
+      .from(".circle, .navLink, .arrow", {
             opacity: 0,
             duration: .5
       }, "-=.5")
