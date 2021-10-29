@@ -139,6 +139,14 @@ img {
 
 @media screen and (min-width: 600px) {
 
+    .container {
+        padding: 0 30px;
+    }
+
+    .loaderName {
+        font-size: 50px;
+    }
+
     .right {
         text-align: left;
         float: none;
@@ -184,15 +192,15 @@ img {
     }
 
     .img1 {
-        right: 0;
-        width: 50vw;
+        right: 30px;
+        width: 45vw;
         margin-top: 100px;
     }
 
     .img2 {
         margin-top: 400px;
         width: 60vw;
-        left: 50%;
+        left: 40%;
         transform: translateX(-50%);
         z-index: -1;
         display: block;
@@ -202,5 +210,13 @@ img {
 @media screen and (min-width: 900px) {
     .navLink, .introTxt {
         font-size: 30px;
+    }
+
+    .loaderName {
+        font-size: 60px;
+    }
+
+    .name {
+        font-size: 75px;
     }
 }

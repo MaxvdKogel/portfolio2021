@@ -4,9 +4,20 @@ import gsap from 'gsap';
 let tl = gsap.timeline();
 
 let fontSize = 60;
+let imgMove = document.querySelector(".img1").clientHeight
+let containerPadding = 10;
 
 if(window.screen.width <= 320) {
     fontSize = 50;
+}
+
+if(window.screen.width > 600) {
+    imgMove = imgMove * 1.5;
+    containerPadding = 30;
+}
+
+if(window.screen.width > 900) {
+    fontSize = 75;
 }
 
 window.onload = () => {
@@ -15,7 +26,7 @@ window.onload = () => {
     } })
       .to(".loaderName", {
           fontSize: fontSize,
-          width: window.innerWidth - 20,
+          width: window.innerWidth - containerPadding*2,
           duration: .75,
           ease: "Power2.inOut",
           autoRound: false
@@ -29,18 +40,18 @@ window.onload = () => {
               document.querySelector(".name").classList.remove("invisible");
           }
       }, "-=.75")
-      .from(".jobTitle", {
+      .from(".jobTitle, .introTxt", {
             opacity: 0,
             y: 100,
             duration: .5,
             ease: "power2.out"
       }, "-=.4")
-      .from(".circle", {
+      .from(".circle, .navLink", {
             opacity: 0,
             duration: .5
       }, "-=.5")
-      .from(".img1", {
-            y: document.querySelector(".img1").clientHeight,
+      .from(".img1, .img2", {
+            y: imgMove,
             duration: 1,
             ease: "power2.out"
     }, "-=.75");
