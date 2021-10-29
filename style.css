@@ -76,7 +76,7 @@
     justify-content: flex-end;
 }
 
-.desktop {
+.navLink {
     display: none;
 }
 
@@ -118,17 +118,89 @@ img {
     pointer-events: none;
 }
 
+.img2 {
+    display: none;
+}
+
 .introTxt {
     margin-top: 50px;
     font-size: 20px;
 }
 
-p + p {
+.intro1 + .intro2 {
     margin: 25px 0 150px 0;
 }
 
 @media screen and (max-width: 320px) {
     .name {
         font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    .right {
+        text-align: left;
+        float: none;
+    }
+
+    .name {
+        display: block;
+    }
+
+    .header {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .navLink {
+        display: block;
+        font-size: 22px;
+    }
+
+    .navLink + .navLink {
+        margin: 0 50px;
+    }
+
+    .circle {
+        margin: 0;
+        height: 15px;
+        width: 15px;
+    }
+
+    .jobTitle {
+        display: none;
+    }
+
+    .introTxt {
+        font-size: 25px;
+        width: 45vw;
+        margin-top: 50px;
+    }
+
+    .img1, .img2 {
+        position: absolute;
+    }
+
+    .img1 {
+        right: 0;
+        width: 50vw;
+        margin-top: 100px;
+    }
+
+    .img2 {
+        margin-top: 400px;
+        width: 60vw;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .navLink, .introTxt {
+        font-size: 30px;
     }
 }

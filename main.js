@@ -5,27 +5,20 @@ let tl = gsap.timeline();
 
 let fontSize = 60;
 
-if(window.screen.width < 320) {
+if(window.screen.width <= 320) {
     fontSize = 50;
 }
-
-window.addEventListener('resize', () => {
-    let fontSize = 60;
-
-    if(window.screen.width < 320) {
-        fontSize = 50;
-    }
-})
 
 window.onload = () => {
     tl.to(".loaderName", { transform: "translate(0)", duration: .75, ease: "power2.out", onComplete: () => {
         document.querySelector(".cover").classList.add("disableCover");
     } })
       .to(".loaderName", {
-          fontSize: 50,
-          width: window.innerWidth -20,
+          fontSize: fontSize,
+          width: window.innerWidth - 20,
           duration: .75,
-          ease: "Power2.inOut"
+          ease: "Power2.inOut",
+          autoRound: false
       })
       .to(".cover", {
           top: document.querySelector(".header").offsetHeight + 15,
