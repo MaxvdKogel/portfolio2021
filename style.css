@@ -30,11 +30,13 @@
 .loader {
     width: 100vw;
     max-width: 100%;
+    background-color: white;
     height: 100vh;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
 }
 
 .cover {
@@ -122,6 +124,10 @@ img {
     pointer-events: none;
 }
 
+.images {
+    position: relative;
+}
+
 .img2 {
     display: none;
 }
@@ -133,6 +139,32 @@ img {
 
 .intro1 + .intro2 {
     margin: 25px 0 150px 0;
+}
+
+/* projects */
+
+.projects {
+    margin-bottom: 150px;
+}
+
+.projectsTitle {
+    opacity: 75%;
+}
+
+.project {
+    padding: 30px 0;
+    border-bottom: 1px solid black;
+}
+
+.project h2 {
+    font-size: 30px;
+    font-family: pragmatica, 'sans-serif';
+    margin-bottom: 15px;
+}
+
+.projects p {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @media screen and (max-width: 320px) {
@@ -149,6 +181,10 @@ img {
 
     .loaderName {
         font-size: 50px;
+    }
+
+    .hero {
+        margin-bottom: 600px;
     }
 
     .right {
@@ -209,9 +245,34 @@ img {
         z-index: -1;
         display: block;
     }
+
+    /* projects */
+
+    .projects {
+        padding-top: 150px;
+    }
+    
+    .project {
+        padding: 50px 0;
+    }
+    
+    .project h2 {
+        font-size: 50px;
+        margin-bottom: 25px;
+    }
+    
+    .projects p {
+        font-size: 20px;
+    }
+
+    
 }
 
 @media screen and (min-width: 900px) {
+    .hero {
+        margin-bottom: 900px;
+    }
+
     .navLink, .introTxt {
         font-size: 30px;
     }
@@ -223,9 +284,32 @@ img {
     .name {
         font-size: 75px;
     }
+
+    /* projects */
+
+    .projects {
+        padding-top: 150px;
+    }
+    
+    .project {
+        padding: 70px 0;
+    }
+    
+    .project h2 {
+        font-size: 70px;
+        margin-bottom: 35px;
+    }
+    
+    .projects p {
+        font-size: 30px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
+
+    .hero {
+        margin-bottom: 1100px;
+    }
 
     .header {
         margin-top: 50px;
@@ -259,5 +343,25 @@ img {
         position: absolute;
         right: 95px;
         bottom: 150px;
+    }
+
+    /* projects */
+    
+    .project {
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid black;
+    }
+    
+    .project h2 {
+        font-size: 80px;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+    
+    .projects p {
+        font-size: 30px;
     }
 }

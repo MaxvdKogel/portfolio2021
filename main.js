@@ -30,19 +30,23 @@ if(window.screen.width > 1200) {
 window.onload = () => {
     tl.to(".loaderName", { transform: "translate(0)", duration: 1, ease: "power2.out", onComplete: () => {
         document.querySelector(".cover").classList.add("disableCover");
+        document.querySelector(".loader").style.backgroundColor = 'transparent';
     } })
       .to(".loaderName", {
           fontSize: fontSize,
           width: window.innerWidth - containerPadding*2,
           duration: .75,
           ease: "Power2.inOut",
-          autoRound: false
+          autoRound: false,
+          force3D:true
       })
       .to(".cover", {
           top: document.querySelector(".header").offsetHeight + 15,
           x: extraSpacing,
           duration: .75,
           ease: "Power2.inOut",
+          autoRound: false,
+          force3D:true,
           onComplete: () => {
               document.querySelector(".cover").classList.add("invisible");
               document.querySelector(".name").classList.remove("invisible");
