@@ -9,6 +9,14 @@
     padding: 0 10px;
 }
 
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
 .pragmatica {
     font-family: pragmatica, 'sans-serif';
 }
@@ -23,6 +31,12 @@
 
 .arrow {
     opacity: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 /* loader */
@@ -167,6 +181,13 @@ img {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* projects hover */
+
+.project img {
+    display: none;
+    width: 1rem;
+}
+
 @media screen and (max-width: 320px) {
     .name {
         font-size: 50px;
@@ -232,7 +253,7 @@ img {
     }
 
     .img1 {
-        right: 30px;
+        right: 0;
         width: 45vw;
         margin-top: 100px;
     }
@@ -286,10 +307,6 @@ img {
     }
 
     /* projects */
-
-    .projects {
-        padding-top: 150px;
-    }
     
     .project {
         padding: 70px 0;
@@ -323,7 +340,7 @@ img {
     }
 
     .img1 {
-        right: 165px;
+        right: 50px;
         width: 30vw;
         margin-top: 50px;
     }
@@ -349,10 +366,13 @@ img {
     
     .project {
         padding: 40px 0;
+        border-bottom: 2px solid black;
+    }
+
+    .link {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 2px solid black;
     }
     
     .project h2 {
@@ -363,5 +383,9 @@ img {
     
     .projects p {
         font-size: 30px;
+    }
+
+    .project p {
+        text-align: right;
     }
 }

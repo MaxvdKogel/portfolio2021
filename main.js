@@ -1,6 +1,8 @@
 import './style.css'
 import gsap from 'gsap';
 
+//loading animation
+
 let tl = gsap.timeline();
 
 let fontSize = 60;
@@ -67,4 +69,12 @@ window.onload = () => {
             duration: 1,
             ease: "power2.out"
     }, "-=.75");
+}
+
+//moving canvas down
+
+var projects = document.querySelector(".projects");
+var projectsPosition = projects.getBoundingClientRect().top + window.scrollY;
+if(window.screen.width > 600) {
+    document.querySelector("canvas").style.transform = "translateY(" + projectsPosition + "px)"
 }

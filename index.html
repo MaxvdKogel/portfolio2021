@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/dey2epq.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="loading">
     <div class="loader pragmatica">
         <div class="cover">
             <h1 class="loaderName"><span class="name1">Max van </span> <span class="right name2"> der Kogel</span></h1>
@@ -53,20 +53,52 @@
         <section class="projects">
             <p class="projectsTitle">Projecten</p>
             <div class="project">
-                <h2>Hiqu</h2>
-                <p>Adobe XD/VueJS/GSAP3/HTML/CSS</p>
+                <a target="_blank" class="link">
+                    <h2>Hiqu</h2>
+                    <p>Adobe XD/VueJS/GSAP3/HTML/CSS</p>
+                    <img src="./img/hiqu.jpg" alt="hiqu">
+                </a>
             </div>
             <div class="project">
-                <h2>Portfolio</h2>
-                <p>Adobe XD/HTML/CSS/JS/Vite</p>
+                <a target="_blank" class="link">
+                    <h2>Portfolio</h2>
+                    <p>Adobe XD/HTML/CSS/JS/Vite</p>
+                    <img src="./img/ik-diploma.jpg" alt="diplomering">
+                </a>
             </div>
             <div class="project">
-                <h2>Stonks Agency</h2>
-                <p>Adobe XD/Illustrator/After Effects/ReactJS/HTML/CSS</p>
+                <a target="_blank" class="link">
+                    <h2>Stonks Agency</h2>
+                    <p>Adobe XD/Illustrator/After Effects/ReactJS/HTML/CSS</p>
+                    <img src="./img/ik-watur.jpg" alt="diplomering">
+                </a>
             </div>
         </section>
     </div>
 
     <script src="./main.js" type="module"></script>
+    <script src="./js/three.min.js"></script>
+    <script src="./js/TweenLite.min.js"></script>
+    <script src="./js/Math.js"></script>
+    <script src="./js/EffectShell.js"></script>
+    <script src="./js/StretchEffect.js"></script>
+	<script src="./js/imagesloaded.pkgd.min.js"></script>
+    <script>
+        const container = document.body
+        const itemsWrapper = document.querySelector('.projects')
+    
+        // Preload images
+        const preloadImages = () => {
+            return new Promise((resolve, reject) => {
+                imagesLoaded(document.querySelectorAll('img'), resolve);
+            });
+        };
+        // And then..
+        preloadImages().then(() => {
+            // Remove the loader
+            document.body.classList.remove('loading');
+            const effect = new StretchEffect(container, itemsWrapper)
+        });
+        </script>
 </body>
 </html>
