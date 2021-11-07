@@ -1,6 +1,10 @@
 import './style.css'
 import gsap from 'gsap';
 
+window.onbeforeunload = function () {
+    window.scrollTo(0,0);
+};
+
 //loading animation
 
 let tl = gsap.timeline();
@@ -75,6 +79,6 @@ window.onload = () => {
 
 var projects = document.querySelector(".projects");
 var projectsPosition = projects.getBoundingClientRect().top + window.scrollY;
-if(window.screen.width > 600) {
-    document.querySelector("canvas").style.transform = "translateY(" + projectsPosition + "px)"
-}
+// if(window.screen.width > 600) {
+//     document.querySelector("canvas").style.transform = "translateY(" + projectsPosition + "px)"
+// }
