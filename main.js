@@ -74,11 +74,3 @@ window.onload = () => {
             ease: "power2.out"
     }, "-=.75");
 }
-
-//moving canvas down
-
-var projects = document.querySelector(".projects");
-var projectsPosition = projects.getBoundingClientRect().top + window.scrollY;
-// if(window.screen.width > 600) {
-//     document.querySelector("canvas").style.transform = "translateY(" + projectsPosition + "px)"
-// }
