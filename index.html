@@ -17,8 +17,8 @@
 
     <div class="container">
         <header class="header arial">
-            <p class="navLink arial">projecten</p>
-            <p class="navLink arial">contact</p>
+            <a class="navLink arial projectLink a">Projecten</a>
+            <a class="navLink arial a navContactLink">Contact</a>
             <div class="circle"></div>
         </header>
         <section class="hero">
@@ -32,7 +32,7 @@
                     <img src="./img/ik-watur.jpg" alt="Max aan het water">
                 </div>
             </div>
-            <div class="introTxt arial">
+            <div class="introTxt arial p">
                 <p class="intro1">
                     Hoi ik ben Max, een creative front end developer uit Groningen.
                 </p>
@@ -50,33 +50,48 @@
               </svg>
               
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <p class="projectsTitle">Projecten</p>
-            <div class="project">
+            <div class="project hidden">
                 <a href="https://maxvdkogel.github.io/hiqu/dist/" class="link">
-                    <h2>Hiqu</h2>
+                    <h2 class="title">Hiqu</h2>
                     <p>Adobe XD/VueJS/GSAP3/HTML/CSS</p>
                     <img src="./img/hiqu.jpg" alt="hiqu">
                 </a>
             </div>
-            <div class="project">
+            <div class="project hidden">
                 <a target="_blank" class="link">
-                    <h2>Portfolio</h2>
+                    <h2 class="title">Portfolio</h2>
                     <p>Adobe XD/HTML/CSS/JS/Vite/GSAP3/Three.js</p>
                     <img src="./img/ik-diploma.jpg" alt="diplomering">
                 </a>
             </div>
-            <div class="project">
+            <div class="project hidden">
                 <a target="_blank" class="link">
-                    <h2>Stonks Agency</h2>
+                    <h2 class="title">Stonks Agency</h2>
                     <p>Adobe XD/Illustrator/After Effects/ReactJS/HTML/CSS</p>
                     <img src="./img/ik-watur.jpg" alt="diplomering">
                 </a>
             </div>
         </section>
 
-        <section class="contact">
-            <h1>Contact</h1>
+        <section class="contact" id="contact">
+            <div class="contactWrapper">
+                <div class="contactTxt">
+                    <h2 class="pragmatica title contactTitle hidden">Samen werken ?</h2>
+                    <p class="arial p contactP hidden">
+                        Ik hou er van om mensen te helpen met een project en gaande weg steeds meer te leren en ervaring op te doen. Een leuk project in gedachten? Neem contact met me op!
+                    </p>
+                </div>
+                <div class="fotoVroeger hidden">
+                    <img src="./img/ik-vroeger.png" alt="Max toen hij nog klein was">
+                </div>
+            </div>
+            <div class="contactLinks arial p">
+                <p class="contactLink github"><a href="https://github.com/MaxvdKogel" class="a">Github</a></p><br>
+                <p class="contactLink">06 12 97 07 15</p><br>
+                <p class="contactLink mail"><a href="mailto:maxvdkogel123@gmail.com" class="a">maxvdkogel123@gmail.com</a></p>
+            </div>
         </section>
     </div>
 

@@ -19,6 +19,11 @@ canvas {
     height: 100vh;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .pragmatica {
     font-family: pragmatica, 'sans-serif';
 }
@@ -31,6 +36,10 @@ canvas {
     opacity: 0;
 }
 
+.hidden {
+    opacity: 0;
+}
+
 .arrow {
     opacity: 0;
 }
@@ -39,6 +48,30 @@ canvas {
     text-decoration: none;
     color: black;
     cursor: pointer;
+}
+
+.a::after {
+    border-bottom: 2px solid black;
+    display: block;
+    content: '';
+    transform: scaleX(0);  
+    transition: transform 0.25s ease-in-out;
+    transform-origin:100% 50%
+}
+
+.a:hover:after {
+    transform: scaleX(1);
+    transform-origin: 0 50%;
+}
+
+.title {
+    font-size: 30px;
+    font-family: pragmatica, 'sans-serif';
+    margin-bottom: 15px;
+}
+
+.p {
+    font-size: 20px;
 }
 
 /* loader */
@@ -69,7 +102,7 @@ canvas {
     transform: translateY(210%) rotate(15deg);
     position: relative;
     line-height: 1;
-    will-change: transform
+    will-change: transform;
 }
 
 .loaderName span {
@@ -100,6 +133,7 @@ canvas {
 
 .navLink {
     display: none;
+    cursor: pointer;
 }
 
 .circle {
@@ -108,6 +142,11 @@ canvas {
     background-color: black;
     border-radius: 100px;
     margin-top: 50px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: black;
 }
 
 /* hero */
@@ -150,7 +189,6 @@ img {
 
 .introTxt {
     margin-top: 50px;
-    font-size: 20px;
 }
 
 .intro1 + .intro2 {
@@ -160,7 +198,7 @@ img {
 /* projects */
 
 .projects {
-    margin-bottom: 150px;
+    margin-bottom: 200px;
 }
 
 .projectsTitle {
@@ -170,12 +208,6 @@ img {
 .project {
     padding: 30px 0;
     border-bottom: 1px solid black;
-}
-
-.project h2 {
-    font-size: 30px;
-    font-family: pragmatica, 'sans-serif';
-    margin-bottom: 15px;
 }
 
 .projects p {
@@ -192,9 +224,43 @@ img {
 
 /* contact section */
 
-.contact {
-    height: 100vh;
-    max-width: 100vw;
+#contact {
+    margin-bottom: 100px;
+}
+
+.contactTitle {
+    margin-bottom: 1em;
+}
+
+.contactTxt {
+    margin-bottom: 2em;
+}
+
+.contactLinks {
+    text-align: right;
+    position: relative;
+}
+
+.contactLink {
+    display: inline-block;
+    text-align: right;
+}
+
+.fotoVroeger {
+    width: 100%;
+    position: relative;
+    height: 220px;
+    margin-bottom: 30px;
+}
+
+.fotoVroeger img {
+    width: 40%;
+    position: absolute;
+    right: 0;
+}
+
+.contactLink + .contactLink {
+    margin-top: 15px;
 }
 
 @media screen and (max-width: 320px) {
@@ -203,7 +269,17 @@ img {
     }
 }
 
+@media screen and (max-height: 700px) {
+    #contact {
+        margin-bottom: 50px;
+    }
+}
+
 @media screen and (min-width: 600px) {
+
+    .p {
+        font-size: 25px;
+    }
 
     .container {
         padding: 0 30px;
@@ -234,7 +310,7 @@ img {
 
     .navLink {
         display: block;
-        font-size: 22px;
+        font-size: 25px;
     }
 
     .navLink + .navLink {
@@ -252,7 +328,6 @@ img {
     }
 
     .introTxt {
-        font-size: 25px;
         width: 45vw;
         margin-top: 50px;
     }
@@ -295,7 +370,20 @@ img {
         font-size: 20px;
     }
 
+    /* contact */
+
+    .contactTitle {
+        font-size: 60px;
+        margin-bottom: .5em;
+    }
+
+    .contactP {
+        width: 80%;
+    }
     
+    .fotoVroeger {
+        height: 400px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -303,7 +391,7 @@ img {
         margin-bottom: 900px;
     }
 
-    .navLink, .introTxt {
+    .navLink {
         font-size: 30px;
     }
 
@@ -313,6 +401,10 @@ img {
 
     .name {
         font-size: 75px;
+    }
+
+    .p {
+        font-size: 30px;
     }
 
     /* projects */
@@ -328,6 +420,20 @@ img {
     
     .projects p {
         font-size: 30px;
+    }
+
+    /* contact */
+
+    .contactTitle {
+        font-size: 75px;
+    }
+
+    .contactP {
+        width: 65%;
+    }
+
+    .fotoVroeger {
+        height: 600px;
     }
 }
 
@@ -396,5 +502,26 @@ img {
 
     .project p {
         text-align: right;
+    }
+
+    /* contact */
+
+    .contactTxt {
+        margin-top: 100px;
+    }
+
+    .contactTitle {
+        font-size: 100px;
+    }
+
+    .contactWrapper {
+        display: flex;
+    }
+
+    .fotoVroeger img {
+        width: 60%;
+        position: absolute;
+        right: 40%;
+        top: 5%;
     }
 }
