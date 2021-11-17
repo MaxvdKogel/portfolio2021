@@ -39,7 +39,7 @@ window.onresize = function(){ location.reload(); }
 
 //smooth scroll nav links
 document.querySelector(".projectLink").addEventListener("click", () => {
-    document.querySelector("#projects").scrollIntoView({behavior: "smooth", block:"start"}); 
+    document.querySelector("#projects").scrollIntoView({behavior: "smooth", block:"center", inline: 'center'}); 
 })
 
 document.querySelector(".navContactLink").addEventListener("click", () => {
@@ -116,3 +116,17 @@ window.onload = () => {
             ease: "power2.out"
     }, "-=.75");
 }
+
+// dark/light mode
+
+let theme = "light";
+
+document.querySelector(".circle").addEventListener("click", () => {
+    if(theme == "light") {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        theme = "dark";
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        theme = "light"
+    }
+})
