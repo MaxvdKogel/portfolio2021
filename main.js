@@ -10,9 +10,10 @@ document.querySelector(".mail").addEventListener("click", () => {
     linkWasClicked = true;
 })
 
+history.scrollRestoration = "manual";
 window.onbeforeunload = function () {
     if(!linkWasClicked) {
-        window.scrollTo(0,0);
+        window.scrollTo(0,-50);
         linkWasClicked = false;
     }
 };
@@ -35,7 +36,7 @@ window.addEventListener('scroll', () => {
 })
 
 //reload page on resize to prevent bugs
-window.onresize = function(){ location.reload(); }
+// window.onresize = function(){ location.reload(); }
 
 //smooth scroll nav links
 document.querySelector(".projectLink").addEventListener("click", () => {
@@ -75,6 +76,7 @@ if(window.innerWidth > 1200) {
 }
 
 window.onload = () => {
+    document.querySelector('body').classList.add('stop-scrolling');
     tl.to(".loaderName", { transform: "translate(0)", duration: 1, ease: "power2.out", onComplete: () => {
         document.querySelector(".cover").classList.add("disableCover");
         document.querySelector(".loader").style.backgroundColor = 'transparent';
@@ -113,7 +115,10 @@ window.onload = () => {
       .from(".img1, .img2", {
             y: imgMove,
             duration: 1,
-            ease: "power2.out"
+            ease: "power2.out",
+            onComplete: () => {
+                document.querySelector('body').classList.remove('stop-scrolling');
+            }
     }, "-=.75");
 }
 

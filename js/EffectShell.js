@@ -1,4 +1,6 @@
-class EffectShell {
+import * as THREE from 'three'
+
+export default class EffectShell {
   constructor(container = document.body, itemsWrapper = null) {
     this.container = container
     this.itemsWrapper = itemsWrapper

@@ -23,6 +23,17 @@ html {
     transition: background-color .75s ease-out, color .75s ease-out;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 .container {
     width: 100%;
     padding: 0 10px;
@@ -62,6 +73,11 @@ a {
 .arrow {
     opacity: 0;
 }
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
 
 .link {
     text-decoration: none;
@@ -520,13 +536,13 @@ img {
     }
     
     .project h2 {
-        font-size: 80px;
         margin-bottom: 30px;
         font-weight: 300;
     }
     
     .projects p {
-        font-size: 30px;
+        font-size: 25px;
+        width: 50%;
     }
 
     .project p {
@@ -540,7 +556,7 @@ img {
     }
 
     .contactTitle {
-        font-size: 100px;
+        font-size: 80px;
     }
 
     .contactWrapper {
@@ -551,6 +567,21 @@ img {
         width: 60%;
         position: absolute;
         right: 40%;
-        top: 5%;
+        height: auto;
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .project h2 {
+        font-size: 80px;
+    }
+    
+    .projects p {
+        font-size: 30px;
+    }
+
+    .contactTitle {
+        font-size: 100px;
     }
 }

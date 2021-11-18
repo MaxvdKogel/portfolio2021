@@ -7,6 +7,9 @@
     <meta name="description" content="Portfolio van Max van der Kogel">
     <title>portfolio</title>
     <link rel="stylesheet" href="https://use.typekit.net/dey2epq.css">
+  <script type="module" crossorigin src="/assets/index.c63b6886.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.eb0bec41.js">
+  <link rel="stylesheet" href="/assets/index.c0a459a8.css">
 </head>
 <body class="loading">
     <div class="loader pragmatica">
@@ -26,10 +29,10 @@
             <p class="arial jobTitle">creative <br> front end developer</p>
             <div class="images">
                 <div class="img1 invert">
-                    <img src="./img/ik-diploma.jpg" alt="Max bij zijn diplomering">
+                    <img src="/assets/ik-diploma.558ef19a.jpg" alt="Max bij zijn diplomering">
                 </div>
                 <div class="img2 invert">
-                    <img src="./img/ik-watur.jpg" alt="Max aan het water">
+                    <img src="/assets/ik-watur.0cb2822b.jpg" alt="Max aan het water">
                 </div>
             </div>
             <div class="introTxt arial p">
@@ -56,21 +59,21 @@
                 <a href="https://maxvdkogel.github.io/hiqu/dist/" class="link">
                     <h2 class="title">Hiqu</h2>
                     <p>Adobe XD/VueJS/GSAP3/HTML/CSS</p>
-                    <img src="./img/hiqu.jpg" alt="hiqu" class="invert">
+                    <img src="/assets/hiqu.258ec747.jpg" alt="hiqu" class="invert">
                 </a>
             </div>
             <div class="project hidden">
                 <a target="_blank" class="link">
                     <h2 class="title">Portfolio</h2>
                     <p>Adobe XD/HTML/CSS/JS/Vite/GSAP3/Three.js</p>
-                    <img src="./img/ik-diploma.jpg" alt="diplomering">
+                    <img src="/assets/ik-diploma.558ef19a.jpg" alt="diplomering">
                 </a>
             </div>
             <div class="project hidden">
                 <a target="_blank" class="link">
                     <h2 class="title">Stonks Agency</h2>
                     <p>Adobe XD/Illustrator/After Effects/ReactJS/HTML/CSS</p>
-                    <img src="./img/kat.jpeg" alt="diplomering">
+                    <img src="/assets/kat.69c28975.jpeg" alt="diplomering">
                 </a>
             </div>
         </section>
@@ -78,13 +81,13 @@
         <section class="contact" id="contact">
             <div class="contactWrapper">
                 <div class="contactTxt">
-                    <h2 class="pragmatica title contactTitle hidden">Samen werken?</h2>
+                    <h2 class="pragmatica title contactTitle hidden">Samen werken ?</h2>
                     <p class="arial p contactP hidden">
                         Ik hou er van om mensen te helpen met een project en gaande weg steeds meer te leren en ervaring op te doen. Een leuk project in gedachten? Neem contact met me op!
                     </p>
                 </div>
                 <div class="fotoVroeger hidden">
-                    <img src="./img/ik-vroeger.png" alt="Max toen hij nog klein was">
+                    <img src="/assets/ik-vroeger.58c42acf.png" alt="Max toen hij nog klein was">
                 </div>
             </div>
             <div class="contactLinks arial p">
@@ -95,29 +98,11 @@
         </section>
     </div>
 
-    <script src="./main.js" type="module"></script>
-    <script src="./js/Math.js" type="module"></script>
-    <script src="./js/EffectShell.js" type="module"></script>
-    <script src="./js/StretchEffect.js" type="module"></script>
-	<!-- <script src="./js/imagesloaded.pkgd.min.js" type="module"></script> -->
-    <script type="module">
-        import imagesLoaded from 'imagesloaded'; 
-        import StretchEffect from './js/StretchEffect.js';
-        const container = document.body
-        const itemsWrapper = document.querySelector('.projects')
     
-        // Preload images
-        const preloadImages = () => {
-            return new Promise((resolve, reject) => {
-                imagesLoaded(document.querySelectorAll('img'), resolve);
-            });
-        };
-        // And then..
-        preloadImages().then(() => {
-            // Remove the loader
-            document.body.classList.remove('loading');
-            const effect = new StretchEffect(container, itemsWrapper)
-        });
-    </script>
+    
+    
+    
+	<!-- <script src="./js/imagesloaded.pkgd.min.js" type="module"></script> -->
+    
 </body>
 </html>

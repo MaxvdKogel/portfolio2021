@@ -1,4 +1,8 @@
-class StretchEffect extends EffectShell {
+import { gsap, Power4 } from 'gsap'
+import * as THREE from 'three'
+import EffectShell from './EffectShell.js'
+
+export default class StretchEffect extends EffectShell {
   constructor(container = document.body, itemsWrapper = null, options = {}) {
     super(container, itemsWrapper)
     if (!this.container || !this.itemsWrapper) return
@@ -72,7 +76,7 @@ class StretchEffect extends EffectShell {
     if (!this.currentItem || !this.isMouseOver) {
       this.isMouseOver = true
       // show plane
-      TweenLite.to(this.uniforms.uAlpha, 0.5, {
+      gsap.to(this.uniforms.uAlpha, 0.5, {
         value: 1,
         ease: Power4.easeOut
       })
@@ -80,7 +84,7 @@ class StretchEffect extends EffectShell {
   }
 
   onMouseLeave(event) {
-    TweenLite.to(this.uniforms.uAlpha, 0.5, {
+    gsap.to(this.uniforms.uAlpha, 0.5, {
       value: 0,
       ease: Power4.easeOut
     })
@@ -103,7 +107,7 @@ class StretchEffect extends EffectShell {
 
     // update position
     this.position = new THREE.Vector3(x, y, 0)
-    TweenLite.to(this.plane.position, 1, {
+    gsap.to(this.plane.position, 1, {
       x: x,
       y: y,
       ease: Power4.easeOut,
